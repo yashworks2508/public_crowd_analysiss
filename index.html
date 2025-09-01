@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Public Transit Crowd-Density Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f6f8fa;
+        }
+        .header-bar {
+            background: #1657c2;
+            color: #fff;
+            padding: 18px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .top-panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #eaf1fc;
+            padding: 8px 24px;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+        }
+        .conditions-bar {
+            margin-bottom: 10px;
+        }
+        #routeGrid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: flex-start;
+            margin: 0 18px 18px 18px;
+        }
+        .route-card {
+            background: #fff;
+            padding: 18px 22px;
+            border-radius: 10px;
+            min-width: 270px;
+            min-height: 90px;
+            box-shadow: 0 1px 2px #0001;
+            margin-bottom: 12px;
+            border-left: 6px solid #cccccc;
+        }
+        .route-card.crowdLow { border-left-color: #2eaf4a; }
+        .route-card.crowdMedium { border-left-color: #f3b204; }
+        .route-card.crowdHigh { border-left-color: #e8483a; }
+        .footer {
+            text-align: center;
+            color: #888;
+            margin-top: 36px;
+            font-size: 0.98em;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-bar">
+        Public Transit Crowd-Density Predictor
+    </div>
+    <div class="top-panel">
+        <span id="timestamp"></span>
+        <span id="events"></span>
+    </div>
+    <div id="conditionBar" class="conditions-bar">
+        <span id="temperature"></span> /
+        <span id="condition"></span>
+        <span id="weatherImpact"></span>
+    </div>
+    <div id="routeGrid"></div>
+    <div class="footer">
+        &copy; 2025 Smart Crowd Analytics
+    </div>
+    <!-- Link to your JavaScript (should be named app.js or similar) -->
+    <script src="app.js"></script>
+</body>
+</html>
